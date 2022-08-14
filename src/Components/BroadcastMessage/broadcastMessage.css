@@ -1,0 +1,128 @@
+.BroadcastMessage{
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+.toBroadCast{
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #DEDCDC;
+    padding: 0px 30px;
+    color: #2185D0;
+    font-weight: 700;
+}
+.toBroadCast input{
+    width: 90%;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: #FAFAFA;;
+}
+.customerList{
+    width: 339px;
+    height: 550px;
+    position: absolute;
+    top: 11%;
+    left: 10%;
+    background-color:#FFFFFF;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    overflow-y: auto;
+}
+
+/* ---------BroadCast Tabs------------ */
+.BroadcastBloc-tabs{
+    display: flex;
+}
+.BroadcastBloc-tabs .broadCastTabs {
+    padding: 10px 0px;
+    text-align: center;
+    width: 100%;
+    background: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+    box-sizing: content-box;
+    position: relative;
+    outline: none;
+    font-weight: 700;
+    font-size: 14px;
+    color: #5E5E62;
+
+}
+
+.BroadcastBloc-tabs .active-tabs{
+    color: #041342;
+    font-weight: 700;
+    border-bottom: 3px solid #041342;
+}
+
+/* --------------Select All Button--------------- */
+
+.selectAll{
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #D9D7D7;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    justify-content: space-between;
+}
+
+.selectAllBtn{
+    width: 110px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #041342;
+    padding: 0px 10px;
+    border-radius: 8px;
+    gap: 0px 5px;
+    cursor: pointer;
+}
+.selectAllBtn h3{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.selectCancel{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+
+.broadCastContent-tabs{
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+    overflow-y: auto;
+}
+
+  .broadCastContent-tabs::-webkit-scrollbar{
+    width: 3px; 
+    background-color: rgb(221, 216, 216);
+  }
+  .BroadCastContent {
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+
+  .active-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+.displayMessageContainer{
+    width: 75%;
+}
+
+.broadcastContainer{
+    display: none;
+    width: 75%;
+    background-color: #FAFAFA;;
+   
+}
