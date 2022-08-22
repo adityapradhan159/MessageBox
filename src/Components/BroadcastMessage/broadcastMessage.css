@@ -2,33 +2,42 @@
     display: flex;
     width: 100%;
     position: relative;
+    flex-direction: column;
+  align-items: center;
 }
 .toBroadCast{
     margin-top: 20px;
     width: 100%;
     height: 50px;
     border-bottom: 1px solid #DEDCDC;
+    display: flex;
+    align-items: center;
     padding: 0px 30px;
-    color: #2185D0;
+}
+.toBroadCast .selectDiv{
+    width: 97%;
+}
+.toBroadCast .toPara{
+    width: 3%;
+}
+.toBroadCast .toPara h2{
+    font-size: 19px;
     font-weight: 700;
+    color: #2185D0;
+    
 }
-.toBroadCast input{
-    width: 90%;
-    height: 40px;
-    border: none;
-    outline: none;
-    background-color: #FAFAFA;;
-}
-.customerList{
+
+/* .customerList{
     width: 339px;
-    height: 550px;
+    height: 450px;
     position: absolute;
-    top: 11%;
+    top: 70px;
     left: 10%;
     background-color:#FFFFFF;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    overflow-y: auto;
-}
+    overflow-y: hidden;
+    z-index: 2;
+} */
 
 /* ---------BroadCast Tabs------------ */
 .BroadcastBloc-tabs{
@@ -79,6 +88,7 @@
     border-radius: 8px;
     gap: 0px 5px;
     cursor: pointer;
+    
 }
 .selectAllBtn h3{
     font-size: 16px;
@@ -98,23 +108,14 @@
     height: 100%;
     flex-direction: column;
     display: flex;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
-  .broadCastContent-tabs::-webkit-scrollbar{
+.broadCastContent-tabs::-webkit-scrollbar{
     width: 3px; 
     background-color: rgb(221, 216, 216);
-  }
-  .BroadCastContent {
-    width: 100%;
-    height: 100%;
-    display: none;
-  }
-
-  .active-content {
-    display: flex;
-    flex-direction: column;
-  }
+}
+ 
   
 .displayMessageContainer{
     width: 75%;
@@ -125,4 +126,47 @@
     width: 75%;
     background-color: #FAFAFA;;
    
+}
+
+/* ---------------Write Message---------- */
+.BroadcastMessage .writeMessage{
+    width: 95%;
+    position: absolute;
+    bottom: 5%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+   
+    z-index: 0;
+}
+
+.notify{
+    background-color: #FCFDFE;
+}
+
+.checkboxSendNotification{
+    -webkit-appearance: none;
+    background-color: #EDEDED;
+	border: 1px solid #cacece;
+	padding: 9px;
+	border-radius: 3px;
+	display: inline-block;
+	position: relative;
+}
+
+/* .checkboxSendNotification:active, .checkboxSendNotification:checked:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+} */
+
+.checkboxSendNotification:checked {
+	background-color: #44BBA5;
+	/* border: 1px solid #adb8c0; */
+	color: white;
+}
+
+.checkboxSendNotification:checked:after {
+	content: url('../../../public/images/tickMark.svg');
+	position: absolute;
+	top: 3px;
+	left: 4px;
 }

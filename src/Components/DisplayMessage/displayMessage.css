@@ -87,20 +87,21 @@
     height: auto;
     display: flex;
     justify-content: space-between;
-    background-color: #FAFAFA;
+    background-color: #FCFDFE;;
 }
 
 .writeMessage .voiceIcon{
     position: absolute;
-    right: 9%;
+    right: 8%;
     top: 7%;
     cursor: pointer;
 }
 .writeMessage .notify{
-    width: 93%;
+    width: 93.5%;
     height: 219px;
     border: 1px solid #9FA2B4;
     border-radius: 8px;
+    background-color: #FCFDFE;
 }
 .writeMessage textarea{
     width: 90%;
@@ -109,7 +110,7 @@
     height: 70%;
     margin:3px;
    padding: 10px ;
-    background-color: #FAFAFA;
+  
     font-size: 18px;
     font-family: "Noto Sans";
     resize: none;
@@ -147,7 +148,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0px 30px;
+    margin: 0px 20px;
 }
 
 /* ------------Sms--- */
@@ -168,4 +169,31 @@
     align-items: center;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     cursor: pointer;
+}
+
+.checkboxSendNotification{
+    -webkit-appearance: none;
+    background-color: #EDEDED;
+	border: 1px solid #cacece;
+	padding: 9px;
+	border-radius: 3px;
+	display: inline-block;
+	position: relative;
+}
+
+/* .checkboxSendNotification:active, .checkboxSendNotification:checked:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+} */
+
+.checkboxSendNotification:checked {
+	background-color: #44BBA5;
+	/* border: 1px solid #adb8c0; */
+	color: white;
+}
+
+.checkboxSendNotification:checked:after {
+	content: url('../../../public/images/tickMark.svg');
+	position: absolute;
+	top: 3px;
+	left: 4px;
 }

@@ -49,7 +49,7 @@ const DisplayMessage = ({item}) => {
 
                 {/* ----------SMS----------- */}
                 <div className="smsNotify">
-                <input type="checkbox" />
+                <input type="checkbox" className='checkboxSendNotification'/>
                 <div className="smsPara">
                     <p>SMS</p>
                 </div>
@@ -57,7 +57,7 @@ const DisplayMessage = ({item}) => {
 
                 {/* ----------Whatsapp----------- */}
                 <div className="whatsappNotify">
-                <input type="checkbox" />
+                <input type="checkbox" className='checkboxSendNotification'/>
                 <div className="whatsappPara">
                     <p>Whatsapp</p>
                 </div>
@@ -65,7 +65,7 @@ const DisplayMessage = ({item}) => {
 
                 {/* ----------App Notification----------- */}
                 <div className="appNotify">
-                <input type="checkbox" />
+                <input type="checkbox" className='checkboxSendNotification'/>
                 <div className="appPara">
                     <p>In app Notification</p>
                 </div>
