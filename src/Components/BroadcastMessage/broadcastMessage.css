@@ -15,11 +15,11 @@
     padding: 0px 30px;
 }
 .toBroadCast .selectDiv{
-    width: 97%;
+    width: 95%;
 }
-.toBroadCast .toPara{
-    width: 3%;
-}
+/* .toBroadCast .toPara{
+    width: 5%;
+} */
 .toBroadCast .toPara h2{
     font-size: 19px;
     font-weight: 700;
@@ -100,8 +100,6 @@
     align-items: center;
     cursor: pointer;
 }
-
-
 
 .broadCastContent-tabs{
     width: 100%;
