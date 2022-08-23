@@ -22,25 +22,25 @@ const MessageCard = ({item,handleChatId}) => {
 
                 <div className="personNameCategory">
                    <div className="personName">
-                    <h2>{item.personName}</h2>
+                    <h2 style={{marginBottom:"0px"}}>{item.personName}</h2>
                    </div>
 
                    {
                     item.category ? (<div style={item.category == "Driver" ? {backgroundColor:"#F0FFFC",color:"#44B49C"} 
                     : item.category == "Group" ? {backgroundColor:"#F3F1FF",color:"#7B61FF"}
                     : item.category == "Client" ? {backgroundColor:"#F0F0F0",color:"#373737"} : ""} className="personCategory" >
-                                        <p>{item.category}</p>
+                                        <p style={{marginBottom:"0px"}}>{item.category}</p>
                                     </div>) : ""
                    }
                     
                 </div>
 
                 <div className="personCompanyName">
-                    <p>{item.companyName}</p>
+                    <p style={{marginBottom:"0px"}}>{item.companyName}</p>
                 </div>
 
                 <div className="personLastMsg">
-                    <p>{item.messages[0].msg}</p>
+                    <p style={{marginBottom:"0px"}}>{item.messages[0].msg}</p>
                 </div>
             </div>
 

@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import Select,{components} from 'react-select';
+import MessageTextArea from '../MessageTextArea/MessageTextArea';
 import "./broadcastMessage.css"
 
 const BroadcastMessage = () => {
@@ -115,67 +116,54 @@ const [selectedOption, setSelectedOption] = useState([]);
       height:"auto",
       display:"flex",
       boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
-      overflowY:"auto",
-      overflowX:"hidden",
+      // overflowY:"auto",
+      // overflowX:"hidden",
       marginLeft:"20px",
       marginTop:"20px",
       zIndex:"99",
       position:"absolute",
 
       backgroundColor:"white",
-      "::-webkit-scrollbar": {
-        width: "10px",
-        height: "0px",
-      },
-      "::-webkit-scrollbar-track": {
-        backgroundColor: "#F0F0F0"
-      },
-      "::-webkit-scrollbar-thumb": {
-        backgroundColor: "#5E5E62",
-        borderRadius: "20px"
-      },
+      // "::-webkit-scrollbar": {
+      //   width: "10px",
+      //   height: "0px",
+      // },
+      // "::-webkit-scrollbar-track": {
+      //   backgroundColor: "#F0F0F0"
+      // },
+      // "::-webkit-scrollbar-thumb": {
+      //   backgroundColor: "#5E5E62",
+      //   borderRadius: "20px"
+      // },
 
-      "::-webkit-scrollbar-button:single-button":{
-        backgroundColor:" #eee",
-        display: "block",
-        backgroundRepeat: "no-repeat"
-      },
+      // "::-webkit-scrollbar-button:single-button":{
+      //   backgroundColor:" #eee",
+      //   display: "block",
+      //   backgroundRepeat: "no-repeat"
+      // },
       
       
-      "::-webkit-scrollbar-button:single-button:vertical:increment" : {
-        height:" 10px",
-        width: "16px",
-        backgroundPosition: "center 4px",
-        backgroundImage: "url(../../../public/images/scrollbarDown.svg)",
-      },
+      // "::-webkit-scrollbar-button:single-button:vertical:increment" : {
+      //   height:" 10px",
+      //   width: "16px",
+      //   backgroundPosition: "center 4px",
+      //   backgroundImage: "url(../../../public/images/scrollbarDown.svg)",
+      // },
       
-      "::-webkit-scrollbar-button:single-button:vertical:decrement" : {
-        height: "10px",
-        width: "16px",
-        backgroundPosition: "center 4px",
-        backgroundImage: "url(../../../public/images/scrollbarUp.svg)",
-      },
+      // "::-webkit-scrollbar-button:single-button:vertical:decrement" : {
+      //   height: "10px",
+      //   width: "16px",
+      //   backgroundPosition: "center 4px",
+      //   backgroundImage: "url(../../../public/images/scrollbarUp.svg)",
+      // },
 
 
       
     }),
     menuList: (base) => ({
       ...base,
-      width:"340px",
+      width:"350px",
       height:"40px",
-      // "::-webkit-scrollbar": {
-      //   width: "4px",
-      //   height: "0px",
-      // },
-      // "::-webkit-scrollbar-track": {
-      //   background: "#f1f1f1"
-      // },
-      // "::-webkit-scrollbar-thumb": {
-      //   background: "#888"
-      // },
-      // "::-webkit-scrollbar-thumb:hover": {
-      //   background: "#555"
-      // }
     }),
     multiValue: (style,{data}) => ({
       ...style,
@@ -204,7 +192,7 @@ const CustomMenu = ({...props }) => {
   
 return (
   <>  
-  <div style={{width:"340px"}}>
+  <div style={{width:"350px"}}>
   <div className="BroadcastBloc-tabs" style={{height:"40px"}}>
         <button className={toggleBroadcastState === 1 ? "broadCastTabs active-tabs" : "broadCastTabs"} onClick={() => {toggleTab(1,"all")}}>
           All 
@@ -223,21 +211,22 @@ return (
           <div className="selectAllBtn" style={showselectedBtn ? {display : 'flex'} : {display : 'none'} }  onClick={() =>handleSelctall()}>
             <img src="./images/selectAll.svg" alt="" />
             <div className="selectAllPara">
-              <h3>Select All</h3>
+              <h3 style={{marginBottom:"0px"}}>Select All</h3>
             </div>
           </div>
 
           <div className="selectedCount" style={showselectedCount ? {display : 'flex'} : {display : 'none'} }>
-            <p>{selectedOption.length} Items Selected</p>
+            <p style={{marginBottom:"0px"}}>{selectedOption.length} Items Selected</p>
           </div>
 
           <div className="selectCancel">
             <img src="./images/dismiss.svg" alt="" />
           </div>
       </div>
-
-    {props.children}
-
+    
+    <div className="OptionDiv">
+      {props.children}
+    </div>
   </div>
 
   </>
@@ -278,7 +267,7 @@ const MultiValueContainer = (props) => {
       {/*---------------- ----Input to select multiple values----------------- */}
         <div className="toBroadCast">
           <div className="toPara">
-            <h2>To : </h2>
+            <h2 style={{marginBottom:"0px"}}>To : </h2>
           </div>
           <div className="selectDiv">
             <Select
@@ -299,8 +288,8 @@ const MultiValueContainer = (props) => {
         {/* ------------------Write Message------------------ */}
 
         <div className="writeMessage" style={showTextArea ? {display:"flex"} : {display:"none"}}>
-        
-        <div className='notify'>
+        <MessageTextArea/>
+        {/* <div className='notify'>
             <textarea placeholder='Notify'>
 
             </textarea>
@@ -309,26 +298,26 @@ const MultiValueContainer = (props) => {
             </div>
             <div className="sendNotification">
 
-            <div className="sendNotification-Container">
+            <div className="sendNotification-Container"> */}
 
                 {/* ----------SMS----------- */}
-                <div className="smsNotify">
+                {/* <div className="smsNotify">
                 <input type="checkbox" className='checkboxSendNotification'/>
                 <div className="smsPara">
                     <p>SMS</p>
                 </div>
-                </div>
+                </div> */}
 
                 {/* ----------Whatsapp----------- */}
-                <div className="whatsappNotify">
+                {/* <div className="whatsappNotify">
                 <input type="checkbox" className='checkboxSendNotification'/>
                 <div className="whatsappPara">
                     <p>Whatsapp</p>
                 </div>
-                </div>
+                </div> */}
 
                 {/* ----------App Notification----------- */}
-                <div className="appNotify">
+                {/* <div className="appNotify">
                 <input type="checkbox" className='checkboxSendNotification'/>
                 <div className="appPara">
                     <p>In app Notification</p>
@@ -342,8 +331,8 @@ const MultiValueContainer = (props) => {
         <div className="send-btn">
             <img src="./images/rightArrow.svg" alt="" />
         </div>
-        </div>
-
+        </div> */}
+  </div>
     </div>
   )
 }

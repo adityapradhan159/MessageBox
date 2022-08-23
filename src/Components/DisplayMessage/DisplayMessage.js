@@ -1,4 +1,5 @@
 import React from 'react';
+import MessageTextArea from '../MessageTextArea/MessageTextArea';
 import "./displayMessage.css"
 
 const DisplayMessage = ({item}) => {
@@ -36,7 +37,9 @@ const DisplayMessage = ({item}) => {
 
         {/* ----------------Text Area Message--------------- */}
         <div className="writeMessage">
-        <div className='notify'>
+
+            <MessageTextArea/>
+        {/* <div className='notify'>
             <textarea placeholder='Notify'>
 
             </textarea>
@@ -47,7 +50,7 @@ const DisplayMessage = ({item}) => {
 
             <div className="sendNotification-Container">
 
-                {/* ----------SMS----------- */}
+               
                 <div className="smsNotify">
                 <input type="checkbox" className='checkboxSendNotification'/>
                 <div className="smsPara">
@@ -55,7 +58,7 @@ const DisplayMessage = ({item}) => {
                 </div>
                 </div>
 
-                {/* ----------Whatsapp----------- */}
+                
                 <div className="whatsappNotify">
                 <input type="checkbox" className='checkboxSendNotification'/>
                 <div className="whatsappPara">
@@ -63,7 +66,7 @@ const DisplayMessage = ({item}) => {
                 </div>
                 </div>
 
-                {/* ----------App Notification----------- */}
+             
                 <div className="appNotify">
                 <input type="checkbox" className='checkboxSendNotification'/>
                 <div className="appPara">
@@ -77,7 +80,7 @@ const DisplayMessage = ({item}) => {
         </div>
         <div className="send-btn">
             <img src="./images/rightArrow.svg" alt="" />
-        </div>
+        </div> */}
         </div>
     </div>
     </>

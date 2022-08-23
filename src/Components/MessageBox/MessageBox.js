@@ -87,7 +87,7 @@ const MessageBox = () => {
 
           <div className="boardCast" onClick={handleBroadcast}>
             <div className="boardCastPara" >
-              <p>Broadcast A Message</p>
+              <p style={{marginBottom:"0px"}}>Broadcast A Message</p>
             </div>
             <div className="addCircle">
               <img src="./images/addCircle.svg" alt="" />
@@ -170,12 +170,12 @@ const MessageBox = () => {
 
           <div className="messageLogs">
             <img src="./images/messageLogs.svg" alt="" />
-            <p>Message Logs</p>
+            <p style={{marginBottom:"0px"}}>Message Logs</p>
           </div>
 
           <div className="chatOperator">
             <img src="./images/chat.svg" alt="" />
-            <p>Chat With Operator</p>
+            <p style={{marginBottom:"0px"}}>Chat With Operator</p>
           </div>
         </div>
        
