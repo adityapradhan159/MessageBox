@@ -130,7 +130,7 @@
 .BroadcastMessage .writeMessage{
     width: 95%;
     position: absolute;
-    bottom: 5%;
+    bottom: 2%;
     height: auto;
     display: flex;
     justify-content: space-between;

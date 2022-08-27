@@ -1,7 +1,7 @@
 .writeMessage{
     width: 95%;
     position: absolute;
-    bottom: 5%;
+    bottom: 2%;
     height: auto;
     display: flex;
     justify-content: space-between;
@@ -50,8 +50,8 @@
    
 }
 .sendNotification-Container input{
-    width: 25px;
-    height: 25px;
+    width: 18px;
+    height: 18px;
 }
 
 .sendNotification-Container p{
@@ -117,5 +117,5 @@
 	content: url('../../../public/images/tickMark.svg');
 	position: absolute;
 	top: 0px;
-	left: 4px;
+	left: 0px;
 }

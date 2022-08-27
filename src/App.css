@@ -8,3 +8,8 @@
 body{
   background-color: rgb(231, 231, 231);
 }
+.navbar{
+  width: 100%;
+  height: 56px;
+  background-color: black;
+}
